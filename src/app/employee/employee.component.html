@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>My company employees</h1>
+    <table class="table table-condensed table-responsive">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+        <tr *ngFor="let data of employees">
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.age}}</td>
+            <td><button class="button button-danger" (click)="deleteEmployee(data.id)">Delete</button></td>
+        </tr>
+    </table>
+    <button class="btn btn-primary" (click)="addEmployee()">Add employee</button>
+</div>

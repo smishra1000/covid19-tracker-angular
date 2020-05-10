@@ -1,0 +1,104 @@
+<div class="container">
+  <h2>Wecome to Quiz Management</h2>
+  <select id="select-type-basic" [(ngModel)]="test_type">
+    <option *ngFor="let type of test_types">
+      {{ type }}
+    </option>
+  </select>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1>Online Quiz</h1>
+      <!-- <h2>{{ timeleft }} Seconds;</h2> -->
+      <div class="clock">
+        <span style="color: #fff;">{{ timeleft }} </span>
+      </div>
+      <div *ngIf="testStatus === 'start'">
+        <strong
+          >{{ selectedQuestion._id }}. {{ selectedQuestion.question }}</strong
+        >
+        <div class="radio" *ngFor="let choice of selectedQuestion.choices">
+            <div class="form-check">
+                <input
+                class="form-check-input"
+                  name="_id{{ selectedQuestion._id }}"
+                  type="radio"
+                  value="{{ choice._id }}"
+                  [(ngModel)]="selectedQuestion.userChoice"
+                  (change)="checkUserChoice(selectedQuestion._id, choice._id)"
+                />
+                <label class="form-check-label" for="_id{{ selectedQuestion._id }}">
+                    {{ choice.choice }}
+                </label>
+            </div>
+        </div>
+       
+        <div class="row">
+          <div class="col-md-3">
+            <button
+              class="btn btn-primary"
+              (click)="previous()"
+              [disabled]="selectedIndex == 0"
+            >
+              Prev
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button
+              class="btn btn-primary"
+              (click)="next()"
+              [disabled]="selectedIndex == questions.length - 1"
+            >
+              Next
+            </button>
+          </div>
+          <div class="col-md-3">
+            <button class="btn btn-success" (click)="submit()">
+              Submit Test
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row" *ngIf="testStatus === 'done'">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-content">
+              <p>
+                <strong>Total questions {{ total }}</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-content">
+              <strong
+                ><p>Total Attempt {{ attempt }}</p></strong
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-content">
+              <strong
+                ><p>Total Right {{ right }}</p></strong
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-content">
+              <strong
+                ><p>Total Wrong {{ wrong }}</p></strong
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

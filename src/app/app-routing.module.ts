@@ -6,7 +6,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './projects/project-details/project-details.component';
 import { CompanyProjectsComponent } from './projects/company-projects/company-projects.component';
 import { ClientProjectsComponent } from './projects/client-projects/client-projects.component';
-
+import { SkillsComponent} from './skills/skills.component';
 
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
@@ -14,6 +14,8 @@ const routes: Routes = [
   { path: 'projects', component: ProjectsComponent},
   { path: 'company-projects', component: CompanyProjectsComponent },
   { path: 'client-projects', component: ClientProjectsComponent },
+  { path: 'skills', component: SkillsComponent },
+
 ];
 
 @NgModule({

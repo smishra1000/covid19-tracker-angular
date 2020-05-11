@@ -3,5 +3,6 @@
 # compiled output
 
 # dependencies
+.gitignore
 node_modules
 

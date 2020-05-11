@@ -1,11 +1,12 @@
 <div class="container">
+  <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
   <table class="table table-condensed table-responsive">
     <tr>
       <th *ngFor = "let column of displayedColumns">
         {{column}}
       </th>
     </tr>
-    <tr *ngFor = "let row of data">
+    <tr *ngFor = "let row of data | LockFilter: query">
       <td *ngFor = "let column of displayedColumns">
         {{row[column]}}
       </td>

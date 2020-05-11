@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let skill of mySkills">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{ skill.name }}</h5>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              [attr.aria-valuenow]="skill.level"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              [ngStyle]="{ width: skill.level + '%',backgroundColor:red }"
+            >
+              <span>{{ skill.level }}% Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

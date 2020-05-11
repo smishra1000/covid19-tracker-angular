@@ -3,21 +3,27 @@
     <aside id="sidebar-wrapper" >
       <div class="sidebar-brand">
        <img src="{{logo}}" style="height: 47px;width: 59px;"/>
+       <hr style="margin-top:2rem;background-color: #fff;"/>
       </div>
-      <ul class="sidebar-nav" >
+     
+      <ul class="sidebar-nav" style="margin-top:50px;">
         <li routerLinkActive="active">
-          <a routerLink="/employee"><i class="fa fa-home"></i>Employee</a>
+          <a routerLink="/employee"><i class="fa fa-users"></i>Employee</a>
         </li>
-        <li>
-          <a routerLink="/projects" data-toggle="collapse" data-target="#submenu2"><i class="fa fa-plug"></i>Projects<span class="pull-right"><b class="caret"></b></span></a>
-         <ul class="collapse sidebar-sub" id="submenu2">
+        <li routerLinkActive="active">
+          <!-- data-toggle="collapse" data-target="#submenu2" -->
+          <a routerLink="/projects" ><i class="fa fa-plug"></i>Projects<span class="pull-right"><b class="caret"></b></span></a>
+         <!-- <ul class="collapse sidebar-sub" id="submenu2">
             <li routerLinkActive="active"><a  routerLink="/projects" title="Title"><i class="fa fa-plug"></i>My Projects</a></li>
             <li routerLinkActive="active"><a  routerLink="/company-projects" title="Title"><i class="fa fa-plug"></i>Company Projects</a></li>
             <li routerLinkActive="active"><a  routerLink="/client-projects" title="Title"><i class="fa fa-plug"></i>Client Projects</a></li>
-        </ul>
+        </ul> -->
         </li>
         <li routerLinkActive="active">
-          <a routerLink="/covid19"><i class="fa fa-user"></i>Covid19</a>
+          <a routerLink="/covid19"><i class="fa fa-user-md" aria-hidden="true"></i>Covid19</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/skills"><i class="fa fa-certificate" aria-hidden="true"></i>My Skills</a>
         </li>
       </ul>
     </aside>

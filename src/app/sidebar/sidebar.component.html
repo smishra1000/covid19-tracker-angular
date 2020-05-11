@@ -1,0 +1,44 @@
+<div id="wrapper" [ngClass]="toggle ? 'toggled' : ''">
+
+    <aside id="sidebar-wrapper" >
+      <div class="sidebar-brand">
+       <img src="{{logo}}" style="height: 47px;width: 59px;"/>
+      </div>
+      <ul class="sidebar-nav" >
+        <li routerLinkActive="active">
+          <a routerLink="/employee"><i class="fa fa-home"></i>Employee</a>
+        </li>
+        <li>
+          <a routerLink="/projects" data-toggle="collapse" data-target="#submenu2"><i class="fa fa-plug"></i>Projects<span class="pull-right"><b class="caret"></b></span></a>
+         <ul class="collapse sidebar-sub" id="submenu2">
+            <li routerLinkActive="active"><a  routerLink="/projects" title="Title"><i class="fa fa-plug"></i>My Projects</a></li>
+            <li routerLinkActive="active"><a  routerLink="/company-projects" title="Title"><i class="fa fa-plug"></i>Company Projects</a></li>
+            <li routerLinkActive="active"><a  routerLink="/client-projects" title="Title"><i class="fa fa-plug"></i>Client Projects</a></li>
+        </ul>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="/covid19"><i class="fa fa-user"></i>Covid19</a>
+        </li>
+      </ul>
+    </aside>
+  
+    <div id="navbar-wrapper">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" id="sidebar-toggle" (click)="toggleSideBar($event)"><i class="fa fa-bars"></i></a>
+            <input type="text"/>
+          </div>
+        </div>
+      </nav>
+    </div>
+  
+    <section id="content-wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+          <router-outlet></router-outlet>
+          </div>
+        </div>
+    </section>
+  
+  </div>

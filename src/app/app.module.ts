@@ -17,6 +17,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './skills/skills.component';
 import { SearchPipe } from './search.pipe';
 import { QuizComponent } from './quiz/quiz.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { ProductService } from './product.service';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { EditproductComponent } from './editproduct/editproduct.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { QuizComponent } from './quiz/quiz.component';
     SidebarComponent,
     SkillsComponent,
     QuizComponent,
-    SearchPipe
+    SearchPipe,
+    ProductlistComponent,
+    AddproductComponent,
+    EditproductComponent
 
   ],
   imports: [
@@ -41,7 +48,7 @@ import { QuizComponent } from './quiz/quiz.component';
     FormsModule,
     BrowserAnimationsModule
   ],
-  providers: [Covid19Service],
+  providers: [Covid19Service,ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

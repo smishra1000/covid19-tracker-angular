@@ -8,6 +8,9 @@ import { CompanyProjectsComponent } from './projects/company-projects/company-pr
 import { ClientProjectsComponent } from './projects/client-projects/client-projects.component';
 import { SkillsComponent} from './skills/skills.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { EditproductComponent } from './editproduct/editproduct.component';
 
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'client-projects', component: ClientProjectsComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'quiz', component: QuizComponent },
+  {path: 'product-list', component: ProductlistComponent},
+  {path: 'addproduct', component: AddproductComponent},
+  {path: 'editproduct/:id', component: EditproductComponent}
 
 ];
 

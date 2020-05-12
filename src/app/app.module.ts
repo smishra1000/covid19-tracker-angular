@@ -16,6 +16,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from './skills/skills.component';
 import { SearchPipe } from './search.pipe';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { SearchPipe } from './search.pipe';
     CompanyProjectsComponent,
     SidebarComponent,
     SkillsComponent,
+    QuizComponent,
     SearchPipe
 
   ],

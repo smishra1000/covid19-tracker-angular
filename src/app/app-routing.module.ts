@@ -7,6 +7,7 @@ import { ProjectDetailsComponent } from './projects/project-details/project-deta
 import { CompanyProjectsComponent } from './projects/company-projects/company-projects.component';
 import { ClientProjectsComponent } from './projects/client-projects/client-projects.component';
 import { SkillsComponent} from './skills/skills.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'company-projects', component: CompanyProjectsComponent },
   { path: 'client-projects', component: ClientProjectsComponent },
   { path: 'skills', component: SkillsComponent },
+  { path: 'quiz', component: QuizComponent },
 
 ];
 

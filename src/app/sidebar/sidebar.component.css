@@ -246,3 +246,32 @@ body {
       margin-right: 250px;
     }
   }
+
+  .dropdown-menu-div{
+    z-index: 20050;
+    position: absolute;
+    left: -376px;
+    top: 44px;
+    width:400px;
+  }
+  .notification-count{
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    position: absolute;
+    left: 16px;
+    top: -2px;
+    font-size: 13px;
+  }
+
+  .image-parent {
+    max-width: 40px;
+  }
+  .list-group-item{
+    border-bottom: 1px solid #ddd;
+    border-top:none;
+  }
+  .list-group-item:last-child{
+    border:none;
+  }
+  
